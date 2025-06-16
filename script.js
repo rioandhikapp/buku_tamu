@@ -12,7 +12,7 @@ async function simpanData() {
     const { data, error } = await supabase.from("buku_tamu").insert([{ nama, username_ig }]);
 
     if (error) return alert("Gagal memasukkan data " + error.message)
-    alert("Data berhasil ditambahkan")
+    alert("Data berhasil ditambahkan " + nama)
 }
 
 window.simpanData = simpanData;
